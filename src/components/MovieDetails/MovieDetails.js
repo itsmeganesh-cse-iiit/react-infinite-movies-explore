@@ -74,7 +74,6 @@ class MovieDetails extends React.Component {
         }
       ]
     ]
-    console.log("re", render_set)
     return <div className="movie-details-area" style={{ backgroundImage: `url(${IMAGE_BASE_URL}${poster_path})` }}>
       <div className="test-area">
         <div className="container">
