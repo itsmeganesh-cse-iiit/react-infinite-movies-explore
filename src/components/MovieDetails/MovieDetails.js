@@ -74,19 +74,20 @@ class MovieDetails extends React.Component {
         }
       ]
     ]
+    console.log("re", render_set)
     return <div className="movie-details-area" style={{ backgroundImage: `url(${IMAGE_BASE_URL}${poster_path})` }}>
       <div className="test-area">
-        <div class="container">
-          <div class="back-button"><BackButton history={history} /></div>
-          <div class="title">{title}</div>
-          <div class="mv-info">
+        <div className="container">
+          <div className="back-button"><BackButton history={history} /></div>
+          <div className="title">{title}</div>
+          <div className="mv-info">
             <div>{vote_average}</div>
             <div>{release_date && release_date.split("-")[0]}</div>
             <div>{runtime}m</div>
           </div>
-          <div class="mv-desc">{overview}</div>
-          <div class="mv-head-div">
-            {render_set.map(each => <MovieInfoComp data={each} />)}
+          <div className="mv-desc">{overview}</div>
+          <div className="mv-head-div">
+            {render_set.map((each, index) => <MovieInfoComp data={each} key={index} />)}
           </div>
         </div>
 
@@ -104,9 +105,8 @@ MovieDetails.defaultProps = {
 }
 
 const MovieInfoComp = (props) => {
-  const { label, value } = props
-  return <div class="mv-head-info">
-    {props.data.map(each => <><div class="mv-label">{label}</div><div>{value}</div></>)}
+  return <div className="mv-head-info">
+    {props.data.map((each, index) => <><div className="mv-label">{each.label}</div><div>{each.value}</div></>)}
   </div>
 }
 
