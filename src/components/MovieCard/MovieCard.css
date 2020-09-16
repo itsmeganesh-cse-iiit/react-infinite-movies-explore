@@ -1,0 +1,37 @@
+.movie-card{
+    display:"flex";
+    flex-direction: column;
+    width:160px;
+    height: 300px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    transition: transform .2s;
+    cursor: pointer;
+
+}
+
+.movie-card-image{
+    height: 230px;
+    border:0.5px solid #ffffff;
+}
+.movie-card-image img{
+    height: inherit;
+    width: 100%;
+}
+
+
+
+.movie-card:hover{
+    transform: scale(1.1);
+}
+.movie-title{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.movie-release{
+    font-size: 0.725rem;
+    color: #ffffff;
+}
+

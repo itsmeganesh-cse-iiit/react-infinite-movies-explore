@@ -1,0 +1,7 @@
+.back-button{
+    cursor: pointer;
+    /* display: flex; */
+    /* flex-direction: row; */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
