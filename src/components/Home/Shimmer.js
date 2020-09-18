@@ -12,11 +12,31 @@ const HomeShimmer = ({
 }) => {
   const list = []
 
+  let noOfColumns = column
+  switch (props.screen) {
+    case "mobile": {
+      noOfColumns = 2
+      break;
+    }
+    case "desktop": {
+      noOfColumns = 6;
+      break;
+    }
+    case "large-screen": {
+      noOfColumns = 8;
+      break;
+    }
+    default: {
+      noOfColumns = 4;
+      break;
+    }
+
+  }
   let height
 
   for (let i = 1; i <= row; i++) {
-    for (let j = 0; j < column; j++) {
-      const itemWidth = (width - padding * (column + 1)) / column
+    for (let j = 0; j < noOfColumns; j++) {
+      const itemWidth = (width - padding * (noOfColumns + 1)) / noOfColumns
       const x = padding + j * (itemWidth + padding)
       const height1 = itemWidth
       const height2 = 20
