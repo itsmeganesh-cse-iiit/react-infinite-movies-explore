@@ -13,25 +13,7 @@ const HomeShimmer = ({
   const list = []
 
   let noOfColumns = column
-  switch (props.screen) {
-    case "mobile": {
-      noOfColumns = 2
-      break;
-    }
-    case "desktop": {
-      noOfColumns = 6;
-      break;
-    }
-    case "large-screen": {
-      noOfColumns = 8;
-      break;
-    }
-    default: {
-      noOfColumns = 4;
-      break;
-    }
 
-  }
   let height
 
   for (let i = 1; i <= row; i++) {
